@@ -1,0 +1,45 @@
+$primary:#FF7307;
+$body: #f3f3f3;
+$black: #1f1f1f;
+$blue: #1f81f4;
+$red: #f42826;
+$grey: #666666;
+$grey1: #999999;
+$grey2: #cccccc;
+$grey3: #e2e2e2;
+$green: #08a34d;
+$green1: #00d0A1;
+$green2: #EAFFF3;
+$white: #ffffff;
+
+
+$color-list: (
+  'primary': $primary,
+  'black': $black,
+  'blue': $blue,
+  'red': $red,
+  'grey': $grey,
+  'grey1': $grey1,
+  'grey2': $grey2,
+  'grey3': $grey3,
+  'green': $green,
+  'green1': $green1,
+  'green2': $green2,
+  'white': $white,
+  'body': $body
+);
+
+:root {
+  --primary: #FF7307;
+  --orange: #FF7307;
+  --grey: #666666;
+  --grey1:  #999999;
+  --grey2: #cccccc;
+  --grey3: #e2e2e2;
+  --black: #1f1f1f;
+  --blue: #1f81f4;
+  --green: #08a34d;
+  --body: #f3f3f3;
+  --white: #ffffff;
+  --red: #f42826;
+}

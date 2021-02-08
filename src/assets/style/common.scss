@@ -1,0 +1,358 @@
+@import "./variable";
+// text
+@for $i from 10 through 32 {
+    @if ($i % 2==0) {
+        @if ($i==10) {
+            .text-10 {
+                font-size: 12px;
+                transform: scale(0.84);
+            }
+        }
+        @else {
+            .text-#{$i} {
+                font-size: #{$i}px;
+            }
+        }
+    }
+}
+
+@each $var in left,
+center,
+right {
+    .text-#{$var} {
+        text-align: #{$var};
+    }
+}
+
+@each $key,
+$value in $color-list {
+    .text-#{$key} {
+        color: $value;
+    }
+    .bg-#{$key} {
+        background-color: $value;
+    }
+}
+
+.text-line-1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.text-line-2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.text-line-3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+// border
+.border {
+    border: 1px solid $body;
+}
+
+@each $var in top,
+bottom,
+left,
+right {
+    .border-#{$var} {
+        border-#{$var}: 1px solid $body;
+    }
+}
+
+// background
+// layout
+// 1.flex
+.flex {
+    display: flex;
+}
+
+.flex-y {
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.justify-start {
+    justify-content: flex-start;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.align-start {
+    align-items: flex-start;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-end {
+    align-items: flex-end;
+}
+
+.align-stretch {
+    align-items: stretch;
+}
+
+.align-baseline {
+    align-items: baseline;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.flex-2 {
+    flex: 2;
+}
+
+.flex-3 {
+    flex: 3;
+}
+
+.flex-4 {
+    flex: 4;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.center-lv {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@for $i from 4 through 40 {
+    @if ($i % 4==0) {
+        .ma-#{$i} {
+            margin: #{$i}px;
+        }
+        .mt-#{$i} {
+            margin-top: #{$i}px;
+        }
+        .mb-#{$i} {
+            margin-bottom: #{$i}px;
+        }
+        .ml-#{$i} {
+            margin-left: #{$i}px;
+        }
+        .mr-#{$i} {
+            margin-right: #{$i}px;
+        }
+        .mlr-#{$i} {
+            margin-left: #{$i}px;
+            margin-right: #{$i}px;
+        }
+        .mtb-#{$i} {
+            margin-top: #{$i}px;
+            margin-bottom: #{$i}px;
+        }
+        .pa-#{$i} {
+            padding: #{$i}px;
+        }
+        .pt-#{$i} {
+            padding-top: #{$i}px;
+        }
+        .pb-#{$i} {
+            padding-bottom: #{$i}px;
+        }
+        .pl#{$i} {
+            padding-left: #{$i}px;
+        }
+        .pr-#{$i} {
+            padding-right: #{$i}px;
+        }
+        .plr-#{$i} {
+            padding-left: #{$i}px;
+            padding-right: #{$i}px;
+        }
+        .ptb-#{$i} {
+            padding-top: #{$i}px;
+            padding-bottom: #{$i}px;
+        }
+    }
+}
+
+.width-full {
+    width: 100%;
+}
+
+.height-full {
+    height: 100%;
+}
+
+.hide-container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.repeat-container {
+  min-height: 100vh;
+}
+
+.round {
+    border-radius: 2000px;
+}
+
+.ovf-a{
+    overflow: auto;
+}
+
+.ovf-h {
+  overflow: hidden;
+}
+
+.ib {
+    display: inline-block;
+}
+
+.bg-cover {
+    background-size: cover;
+}
+
+.bg-contain {
+  background-size: contain;
+}
+
+.bg-100 {
+  background-size: 100% 100%;
+}
+
+.rd {
+    border-radius: 4px;
+}
+
+.rd-6 {
+  border-radius: 6px;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
+}
+
+.center-x {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.center-y {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.center-xy {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.center-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"]{
+  -moz-appearance: textfield;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.text-p {
+  text-indent: 2em;
+}
+
+.shadow {
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+}
+
+
+html, body {
+  font-size: 14px;
+  color: $black;
+  background-color: $body;
+}
+
+
+// reset css
+
+* {
+    box-sizing: border-box !important;
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+input, button {
+  outline: none;
+  border: none;
+  background-color: $white;
+}
+
+textarea {
+  border: none;
+  resize:  none;
+  background-color: $white;
+}
+
